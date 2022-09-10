@@ -2,16 +2,7 @@ package valuations
 
 import (
 	"fmt"
-	"time"
 )
-
-type ValuationModel struct {
-	Id            int64
-	StreetAddress string
-	Town          string
-	ValuationDate time.Time
-	Value         float64
-}
 
 func LastEncounteredRecord() {
 	fmt.Printf("lastEncounteredRecord called")

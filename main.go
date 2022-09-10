@@ -8,13 +8,13 @@ import (
 	"strings"
 
 	"homes.co.nz/helper"
-	"homes.co.nz/property/valuations"
+	model "homes.co.nz/property/model"
 )
 
-var allRecords []valuations.ValuationModel
+var allRecords []model.ValuationModel
 
-func GetRecordFromArray(lineRecord []string) valuations.ValuationModel {
-	record := valuations.ValuationModel{
+func GetRecordFromArray(lineRecord []string) model.ValuationModel {
+	record := model.ValuationModel{
 		Id:            helper.ParseInt64(lineRecord[0]),
 		StreetAddress: helper.GetString(lineRecord[1]),
 		Town:          helper.GetString(lineRecord[2]),
